@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  src: url("./public/font/PixelFJVerdana12pt.ttf") format("truetype");
   line-height: 1.5;
   font-weight: 400;
 
@@ -28,6 +28,7 @@ a:hover {
 
 body {
   background-color: #1a1a1a;
+  font-family: "PixelFJVerdana", sans-serif;
 }
 
 h1 {
