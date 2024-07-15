@@ -1,8 +1,12 @@
+import Header from "./components/Header";
+import Hello from "./components/Hello";
+
 function App() {
   return (
     <>
-      <div className="text-white p-4">
-        <h1 className="font-pixel">dtcfvgbhnkjmk,ohfdxcgbjmk</h1>
+      <div className="p-8">
+        <Header />
+        <Hello />
       </div>
     </>
   );
