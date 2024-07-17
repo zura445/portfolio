@@ -6,6 +6,13 @@ function App() {
   return (
     <>
       <div className="p-8">
+        <div className="flex flex-col absolute left-2">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+        </div>
         <Header />
         <Hello />
         <AboutMe />
