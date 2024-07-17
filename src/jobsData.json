@@ -1,0 +1,62 @@
+{
+  "jobs": [
+    {
+      "company": "Mymarket.ge",
+      "logo": "/images/my.jpg",
+      "title": "Intern frontend developer at Mymarket.ge",
+      "duration": "Apr 2021 - Oct 2021 (7 months)",
+      "responsibilities": [
+        "Creating basic HTML structures for web pages",
+        "Implementing simple CSS styles and layouts",
+        "Assisting in converting design mockups to HTML/CSS",
+        "Learning and applying responsive design principles",
+        "Collaborating with senior developers on small tasks",
+        "Participating in code reviews to improve skills",
+        "Helping maintain and update existing web pages"
+      ]
+    },
+    {
+      "company": "Myparts.ge",
+      "logo": "/images/my.jpg",
+      "title": "Junior Front-End Developer at Myparts.ge",
+      "duration": "Oct 2021 - Jul 2022 (10 months)",
+      "responsibilities": [
+        "Building responsive web interfaces using HTML, CSS, and JavaScript",
+        "Writing clean, maintainable, and efficient code",
+        "Working with modern front-end frameworks like React and Next",
+        "Debugging and fixing issues in existing code",
+        "Participating in code reviews and incorporating feedback",
+        "Assisting in the development of reusable components and libraries",
+        "Assisting in the implementation of version control using Git",
+        "Participating in agile development processes and team meetings"
+      ]
+    },
+    {
+      "company": "Kernel",
+      "logo": "/images/kernel.png",
+      "title": "Software Quality Assurance Specialist",
+      "duration": "Apr 2022 - Sep 2023 (1 year 6 months)",
+      "responsibilities": [
+        "Calibrated instruments to match required tolerances and achieve consistent, reliable results.",
+        "Rejected and detailed non-compliant processes, noting correct configuration based on related drawings, specifications and plans.",
+        "Communicated product, process and documentation discrepancies to correct problems and achieve process improvements.",
+        "Sampled and tested products based on item type, quality grading requirements and regulatory standards.",
+        "Tracked and reported inspection results for raw materials to notify management of substandard input.",
+        "Removed defects from material surfaces for more polished finish.",
+        "Monitored the proper recycling or disposal of unacceptable products.",
+        "Calculated defect percentages or averages to help locate root cause of problems."
+      ]
+    },
+    {
+      "company": "TNET",
+      "logo": "/images/tnet-logo.png",
+      "title": "Front-End Developer at Vendoo.ge",
+      "duration": "Jul 2022 - Mar 2024 (1 year 9 months)",
+      "responsibilities": [
+        "Active participation in the planning of the work process for the development of the site",
+        "Discussing and actively using the latest technologies in the project, such as Next.js, Tailwind CSS and TypeScript",
+        "Maintaining coding standards preserves project quality"
+      ]
+    }
+  ]
+}

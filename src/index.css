@@ -17,6 +17,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* vscode-theme.css */
+body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vscode-header {
+  background-color: #007acc;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vscode-sidebar {
+  background-color: #252526;
+  color: #d4d4d4;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+}
+
+.vscode-content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.vscode-code {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+  white-space: pre;
+  font-family: "Courier New", Courier, monospace;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
