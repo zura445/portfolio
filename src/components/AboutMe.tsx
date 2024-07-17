@@ -34,7 +34,7 @@ function AboutMe() {
                 alt={`${job.company}-logo`}
                 className="rounded-full w-10 h-10"
               />
-              <div className="ml-4 text-gray-400">
+              <div className="ml-4 text-gray-400 font-[PixelFJVerdana12pt]">
                 <p>{job.title}</p>
                 <p>{job.company}</p>
                 <p>{job.duration}</p>
