@@ -19,7 +19,7 @@ function AboutMe() {
       <div className="flex justify-center text-8xl mt-8 text-gray-500">
         {"<"}About_me{">"}
       </div>
-      <p className="m-auto pt-8 max-w-[800px] text-gray-400">
+      <p className="m-auto pt-8 max-w-[800px] text-gray-400 font-mono	">
         ...Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
         explicabo, repellat maxime, debitis quaerat impedit velit deleniti
         minima rerum quis ducimus sint tempore tenetur animi harum sed? Dolore,
@@ -34,13 +34,13 @@ function AboutMe() {
                 alt={`${job.company}-logo`}
                 className="rounded-full w-10 h-10"
               />
-              <div className="ml-4 text-gray-400 font-[PixelFJVerdana12pt]">
+              <div className="ml-4 text-gray-400 font-mono	">
                 <p>{job.title}</p>
                 <p>{job.company}</p>
                 <p>{job.duration}</p>
               </div>
             </div>
-            <ul className="text-gray-400 list-disc pl-5">
+            <ul className="text-gray-400 list-disc pl-5 font-mono	">
               {job.responsibilities.map((responsibility, respIndex) => (
                 <li key={respIndex}>{responsibility}</li>
               ))}
@@ -52,7 +52,7 @@ function AboutMe() {
         <div className="flex justify-center mt-8">
           <button
             onClick={toggleJobsVisibility}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none"
+            className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none"
           >
             {showAll ? "See less" : "See more"}
           </button>

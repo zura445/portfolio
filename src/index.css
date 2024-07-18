@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -21,7 +21,7 @@
 body {
   background-color: #1e1e1e;
   color: #d4d4d4;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Silkscreen", sans-serif;
 }
 
 .vscode-header {
