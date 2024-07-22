@@ -19,7 +19,7 @@ function AboutMe() {
       <div className="flex justify-center text-8xl mt-8 text-gray-500">
         {"<"}About_me{">"}
       </div>
-      <p className="m-auto pt-8 max-w-[800px] text-gray-400 font-mono	">
+      <p className="m-auto pt-8 max-w-[800px] text-gray-400 font-mono">
         ...Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
         explicabo, repellat maxime, debitis quaerat impedit velit deleniti
         minima rerum quis ducimus sint tempore tenetur animi harum sed? Dolore,
