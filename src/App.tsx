@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hello from "./components/Hello";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
+import Contacts from "./components/Contacts";
 
 function App() {
   console.log(document.body.clientHeight);
@@ -27,6 +28,7 @@ function App() {
         <AboutMe />
         <Portfolio />
         <Skills />
+        <Contacts />
       </div>
     </>
   );
