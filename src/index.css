@@ -17,6 +17,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 /* vscode-theme.css */
 body {
   background-color: #1e1e1e;
