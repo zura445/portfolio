@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const TYPING_SPEED = 150;
 const DELETING_SPEED = 50;
