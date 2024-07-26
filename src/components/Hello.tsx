@@ -50,7 +50,7 @@ function Hello() {
         <span id="cursor"></span>
         {' "}'}
       </h1>
-      <div className="w-full h-[700px] overflow-hidden ml-4">
+      <div className="w-full h-[700px] overflow-hidden">
         <img
           className="w-full h-full object-cover object-bottom mt-8"
           src="/images/code.jpg"

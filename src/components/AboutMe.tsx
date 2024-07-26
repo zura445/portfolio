@@ -16,7 +16,7 @@ function AboutMe() {
       <div className="flex justify-center text-4xl mt-8 text-gray-500">
         {"{ "}/{" }"}
       </div>
-      <div className="flex justify-center text-8xl mt-8 text-gray-500">
+      <div className="flex justify-center text-5xl md:text-8xl mt-8 text-gray-500">
         {"<"}About_me{">"}
       </div>
       <p className="m-auto pt-8 max-w-[800px] text-gray-400 font-mono">

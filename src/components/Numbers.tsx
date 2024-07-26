@@ -42,7 +42,7 @@ function Numbers() {
   }, [updateCount]);
 
   return (
-    <div className="flex flex-col absolute left-2 border-r-2 border-gray-700 pr-2">
+    <div className="md:flex hidden flex-col absolute left-2 border-r-2 border-gray-700 pr-2">
       {count.map((num) => (
         <span key={num}>{num}</span>
       ))}

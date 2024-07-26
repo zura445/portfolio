@@ -116,7 +116,7 @@ function Skills() {
         </p>
       </div>
       <div ref={skillsRef}>
-        <ul className="text-center text-6xl">
+        <ul className="text-center text-3xl md:text-6xl">
           {skills.map((skill, index) => (
             <li key={index} className="mt-3">
               {"{_<"}

@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="p-8 pl-12">
+      <div className="p-8 md:pl-12 pl-8">
         <Numbers />
         <Header />
         <Hello />
