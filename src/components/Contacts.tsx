@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   name: string;
@@ -13,20 +13,24 @@ interface FormData {
 const schema = yup.object().shape({
   name: yup
     .string()
-    .min(2, "სახელი უნდა შეიცავდეს მინიმუმ 2 სიმბოლოს")
-    .required("სახელი სავალდებულოა"),
+    .min(2, "The name must contain at least 2 characters")
+    .required("Name is required"),
   email: yup
     .string()
-    .email("არასწორი ელ-ფოსტის ფორმატი")
-    .min(2, "ელ-ფოსტა უნდა შეიცავდეს მინიმუმ 2 სიმბოლოს")
-    .required("ელ-ფოსტა სავალდებულოა"),
+    .email("Invalid email format")
+    .min(2, "Email must contain at least 2 characters")
+    .required("Email is mandatory")
+    .test("is-valid", "Invalid email format", (value) => {
+      return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
+    }),
   message: yup
     .string()
-    .min(2, "შეტყობინება უნდა შეიცავდეს მინიმუმ 2 სიმბოლოს")
-    .required("შეტყობინება სავალდებულოა"),
+    .min(2, "The message must contain at least 2 characters")
+    .required("Notification is mandatory"),
 });
 
 const ContactForm: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
   const {
     register,
     handleSubmit,
@@ -38,19 +42,19 @@ const ContactForm: React.FC = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const templateParams = {
-        from_name: data.name,
-        from_email: data.email,
-        to_email: "zuratetra@gmail.com",
-        message: data.message,
-      };
-
-      await emailjs.send("zjtgz3mXO1oe1P8Yh", "service_g82e5so");
-
-      console.log("Email sent successfully!");
-      reset();
+      if (form.current) {
+        await emailjs.sendForm(
+          "service_raqnjx6",
+          "template_4ztwcda",
+          form.current,
+          "zjtgz3mXO1oe1P8Yh"
+        );
+        console.log("Email sent successfully");
+        console.log("message text");
+        reset();
+      }
     } catch (error) {
-      console.error("Failed to send email:", error);
+      console.error("Error submitting form:", error);
     }
   };
 
@@ -69,8 +73,9 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
       <form
+        ref={form}
         onSubmit={handleSubmit(onSubmit)}
-        className="max-w-6xl mx-auto p-6 mt-6 text-white"
+        className="max-w-6xl mx-auto p-6 mt-6 text-white font-mono"
       >
         <div className="mb-6 relative">
           <input
