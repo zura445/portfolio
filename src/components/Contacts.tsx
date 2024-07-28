@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import emailjs from "emailjs-com";
 
 interface FormData {
   name: string;
@@ -30,13 +31,27 @@ const ContactForm: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    // აქ შეგიძლიათ დაამატოთ ფორმის გაგზავნის ლოგიკა
+  const onSubmit = async (data: FormData) => {
+    try {
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        to_email: "zuratetra@gmail.com",
+        message: data.message,
+      };
+
+      await emailjs.send("zjtgz3mXO1oe1P8Yh", "service_g82e5so");
+
+      console.log("Email sent successfully!");
+      reset();
+    } catch (error) {
+      console.error("Failed to send email:", error);
+    }
   };
 
   return (
@@ -55,7 +70,7 @@ const ContactForm: React.FC = () => {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="max-w-6xl mx-auto p-6 mt-6 text-white font-mono"
+        className="max-w-6xl mx-auto p-6 mt-6 text-white"
       >
         <div className="mb-6 relative">
           <input
