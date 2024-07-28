@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import jobsData from "../../src/jobsData.json";
 
 interface Job {

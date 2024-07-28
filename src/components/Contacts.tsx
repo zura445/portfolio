@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 interface FormData {
   name: string;
@@ -6,26 +9,33 @@ interface FormData {
   message: string;
 }
 
+const schema = yup.object().shape({
+  name: yup
+    .string()
+    .min(2, "სახელი უნდა შეიცავდეს მინიმუმ 2 სიმბოლოს")
+    .required("სახელი სავალდებულოა"),
+  email: yup
+    .string()
+    .email("არასწორი ელ-ფოსტის ფორმატი")
+    .min(2, "ელ-ფოსტა უნდა შეიცავდეს მინიმუმ 2 სიმბოლოს")
+    .required("ელ-ფოსტა სავალდებულოა"),
+  message: yup
+    .string()
+    .min(2, "შეტყობინება უნდა შეიცავდეს მინიმუმ 2 სიმბოლოს")
+    .required("შეტყობინება სავალდებულოა"),
+});
+
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(formData);
+  const onSubmit = (data: FormData) => {
+    console.log(data);
     // აქ შეგიძლიათ დაამატოთ ფორმის გაგზავნის ლოგიკა
   };
 
@@ -44,67 +54,71 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
       <form
-        onSubmit={handleSubmit}
-        className="max-w-6xl mx-auto p-6 mt-6 text-white"
+        onSubmit={handleSubmit(onSubmit)}
+        className="max-w-6xl mx-auto p-6 mt-6 text-white font-mono"
       >
         <div className="mb-6 relative">
           <input
+            {...register("name")}
             type="text"
             id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
             className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-blue-400 text-white"
           />
           <label
             htmlFor="name"
             className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
-                      ${formData.name ? "text-blue-400 -top-3.5 text-xs" : ""}`}
+                      ${
+                        errors.name ? "text-red-400" : "text-blue-400"
+                      } -top-3.5 text-xs`}
           >
             _name*
           </label>
+          {errors.name && (
+            <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
+          )}
         </div>
 
         <div className="mb-6 relative">
           <input
+            {...register("email")}
             type="email"
             id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
             className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-blue-400 text-white"
           />
           <label
             htmlFor="email"
             className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
                       ${
-                        formData.email ? "text-blue-400 -top-3.5 text-xs" : ""
-                      }`}
+                        errors.email ? "text-red-400" : "text-blue-400"
+                      } -top-3.5 text-xs`}
           >
             _email*
           </label>
+          {errors.email && (
+            <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
+          )}
         </div>
 
         <div className="mb-6 relative">
           <textarea
+            {...register("message")}
             id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
             className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-blue-400 text-white resize-none min-h-[100px]"
           />
           <label
             htmlFor="message"
             className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
                       ${
-                        formData.message ? "text-blue-400 -top-3.5 text-xs" : ""
-                      }`}
+                        errors.message ? "text-red-400" : "text-blue-400"
+                      } -top-3.5 text-xs`}
           >
             _message*
           </label>
+          {errors.message && (
+            <p className="text-red-400 text-xs mt-1">
+              {errors.message.message}
+            </p>
+          )}
         </div>
 
         <button
