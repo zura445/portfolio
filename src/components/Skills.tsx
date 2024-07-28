@@ -4,34 +4,35 @@ interface SkillTexts {
   [key: string]: string;
 }
 
-const TYPING_SPEED = 150;
-const DELETING_SPEED = 50;
-const PAUSE_TIME = 1000;
+const TYPING_SPEED = 300;
+const DELETING_SPEED = 100;
+const PAUSE_TIME = 2000;
 
 function Skills() {
   const [skillTexts, setSkillTexts] = useState<SkillTexts>({});
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(TYPING_SPEED);
+  const [startAnimation, setStartAnimation] = useState(false);
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const skills = [
-    { name: "TypeScript", color: "text-blue-500" },
-    { name: "HTML5", color: "text-green-400" },
+    { name: "Git", color: "text-red-500" },
     { name: "CSS", color: "text-red-300" },
     { name: "SASS", color: "text-gray-500" },
-    { name: "JavaScript", color: "text-blue-700" },
-    { name: "React.js", color: "text-green-600" },
-    { name: "Git", color: "text-red-500" },
-    { name: "Bootstrap", color: "text-gray-700" },
-    { name: "Tailwind CSS", color: "text-pink-400" },
+    { name: "HTML5", color: "text-green-400" },
     { name: "Next.js", color: "text-red-200" },
+    { name: "React.js", color: "text-green-600" },
+    { name: "Bootstrap", color: "text-gray-700" },
+    { name: "JavaScript", color: "text-blue-700" },
+    { name: "TypeScript", color: "text-blue-500" },
+    { name: "Tailwind CSS", color: "text-pink-400" },
   ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          handleTyping();
+          setStartAnimation(true);
         }
       },
       { threshold: 0.1 }
@@ -49,14 +50,18 @@ function Skills() {
   }, []);
 
   useEffect(() => {
-    let timer = setTimeout(() => {
-      handleTyping();
-    }, typingSpeed);
+    if (startAnimation) {
+      let timer = setTimeout(() => {
+        handleTyping();
+      }, typingSpeed);
 
-    return () => clearTimeout(timer);
-  }, [skillTexts, isDeleting, typingSpeed]);
+      return () => clearTimeout(timer);
+    }
+  }, [skillTexts, isDeleting, typingSpeed, startAnimation]);
 
   const handleTyping = () => {
+    if (!startAnimation) return;
+
     const maxLength = Math.max(...skills.map((skill) => skill.name.length));
 
     if (!isDeleting) {
@@ -121,7 +126,7 @@ function Skills() {
             <li key={index} className="mt-3">
               {"{_<"}
               <span className={skill.color}>
-                {skillTexts[skill.name] || ""}
+                {startAnimation ? skillTexts[skill.name] || "" : ""}
               </span>
               {">}"}
               <span id="cursor"></span>

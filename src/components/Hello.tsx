@@ -52,7 +52,7 @@ function Hello() {
       </h1>
       <div className="w-full h-[700px] overflow-hidden">
         <img
-          className="w-full h-full object-cover object-bottom mt-8"
+          className="w-full h-full object-cover object-bottom mt-8 ml-2"
           src="/images/code.jpg"
           alt="logo image"
         />
