@@ -5,10 +5,11 @@ function Portfolio() {
         <p className="text-xl">( ! )</p>
         <p className="text-4xl mt-4">{`<Portfolio>`}</p>
         <p className="max-w-[700px] m-auto pt-4 font-mono">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vel,
-          autem a eum quas sit nobis voluptatum voluptates doloribus porro
-          veniam eveniet, rem reprehenderit optio quidem dolorem minima odit
-          illum.
+          "Welcome to my portfolio showcasing a diverse range of web development
+          projects. From dynamic websites for local businesses to innovative web
+          applications, each project demonstrates my skills in front-end
+          development, user experience design, and quality assurance. Explore
+          below to see how I bring ideas to life through code."
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 mt-8">

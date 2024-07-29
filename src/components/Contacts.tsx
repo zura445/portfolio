@@ -5,17 +5,17 @@ import * as yup from "yup";
 import emailjs from "@emailjs/browser";
 
 interface FormData {
-  name: string;
-  email: string;
+  user_name: string;
+  user_email: string;
   message: string;
 }
 
 const schema = yup.object().shape({
-  name: yup
+  user_name: yup
     .string()
     .min(2, "The name must contain at least 2 characters")
     .required("Name is required"),
-  email: yup
+  user_email: yup
     .string()
     .email("Invalid email format")
     .min(2, "Email must contain at least 2 characters")
@@ -56,6 +56,7 @@ const ContactForm: React.FC = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
     }
+    console.log(form.current);
   };
 
   return (
@@ -65,10 +66,9 @@ const ContactForm: React.FC = () => {
           <p className="text-xl">( * )</p>
           <p className="text-4xl mt-4">{`<Contacts_me>`}</p>
           <p className="max-w-[700px] m-auto pt-4 font-mono">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            vel, autem a eum quas sit nobis voluptatum voluptates doloribus
-            porro veniam eveniet, rem reprehenderit optio quidem dolorem minima
-            odit illum.
+            "Get in touch with me. Whether you have a project in mind or just
+            want to say hello, I'd love to hear from you. Fill out the form
+            below and I'll get back to you as soon as possible."
           </p>
         </div>
       </div>
@@ -79,43 +79,49 @@ const ContactForm: React.FC = () => {
       >
         <div className="mb-6 relative">
           <input
-            {...register("name")}
+            {...register("user_name")}
             type="text"
-            id="name"
+            id="user_name"
+            name="user_name"
             className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-blue-400 text-white"
           />
           <label
-            htmlFor="name"
+            htmlFor="user_name"
             className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
                       ${
-                        errors.name ? "text-red-400" : "text-blue-400"
+                        errors.user_name ? "text-red-400" : "text-blue-400"
                       } -top-3.5 text-xs`}
           >
             _name*
           </label>
-          {errors.name && (
-            <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
+          {errors.user_name && (
+            <p className="text-red-400 text-xs mt-1">
+              {errors.user_name.message}
+            </p>
           )}
         </div>
 
         <div className="mb-6 relative">
           <input
-            {...register("email")}
-            type="email"
-            id="email"
+            {...register("user_email")}
+            type="text"
+            id="user_email"
+            name="user_email"
             className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-blue-400 text-white"
           />
           <label
-            htmlFor="email"
+            htmlFor="user_email"
             className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
                       ${
-                        errors.email ? "text-red-400" : "text-blue-400"
+                        errors.user_email ? "text-red-400" : "text-blue-400"
                       } -top-3.5 text-xs`}
           >
             _email*
           </label>
-          {errors.email && (
-            <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>
+          {errors.user_email && (
+            <p className="text-red-400 text-xs mt-1">
+              {errors.user_email.message}
+            </p>
           )}
         </div>
 
@@ -123,6 +129,7 @@ const ContactForm: React.FC = () => {
           <textarea
             {...register("message")}
             id="message"
+            name="message"
             className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-blue-400 text-white resize-none min-h-[100px]"
           />
           <label

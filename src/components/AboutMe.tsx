@@ -35,11 +35,11 @@ function AboutMe() {
       <div className="flex justify-center text-4xl sm:text-5xl md:text-8xl mt-8 text-gray-500">
         {"<"}About_me{">"}
       </div>
-      <p className="m-auto pt-8 max-w-[800px] text-sm sm:text-base text-gray-400 font-mono">
-        ...Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-        explicabo, repellat maxime, debitis quaerat impedit velit deleniti
-        minima rerum quis ducimus sint tempore tenetur animi harum sed? Dolore,
-        porro delectus.
+      <p className="m-auto pt-8 max-w-[800px] text-sm sm:text-base text-gray-400 font-mono text-center">
+        ...I'm a web developer with experience in Front-End and Software Quality
+        Assurance. I strive to create innovative, high-quality products that
+        meet modern standards, focusing on enhancing user experience and
+        ensuring software quality."
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         {jobs.slice(0, 2).map((job, index) => (

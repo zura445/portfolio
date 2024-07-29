@@ -114,10 +114,9 @@ function Skills() {
         <p className="text-xl">( # )</p>
         <p className="text-4xl mt-4">{"<Skills>"}</p>
         <p className="max-w-[700px] m-auto pt-4 font-mono">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vel,
-          autem a eum quas sit nobis voluptatum voluptates doloribus porro
-          veniam eveniet, rem reprehenderit optio quidem dolorem minima odit
-          illum.
+          "Web development skills and technologies I've mastered and use in
+          projects. These tools help me create modern and efficient web
+          applications."
         </p>
       </div>
       <div ref={skillsRef}>
