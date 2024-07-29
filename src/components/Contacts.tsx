@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async () => {
     try {
       if (form.current) {
         await emailjs.sendForm(
