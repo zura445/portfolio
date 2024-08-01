@@ -24,6 +24,8 @@ function Portfolio() {
             <img src="/images/tour.jpg" alt="tours image" />
             <div className="mt-2">zura tours</div>
           </a>
+        </div>
+        <div className="border border-gray-700 p-6 flex gap-8">
           <a href="https://social-notifications-ui.vercel.app/" target="blank">
             <img src="/images/notifications.jpg" alt="notifications image" />
             <div className="mt-2">Notifications</div>
@@ -34,6 +36,8 @@ function Portfolio() {
             <img src="/images/nexus.jpg" alt="tours image" />
             <div className="mt-2">Nexus project</div>
           </a>
+        </div>
+        <div className="border border-gray-700 p-6 flex gap-8">
           <a href="https://rate-design.vercel.app/" target="blank">
             <img src="/images/rate.jpg" alt="notifications image" />
             <div className="mt-2">Rate-design</div>
