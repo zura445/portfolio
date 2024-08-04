@@ -12,7 +12,7 @@ function Portfolio() {
           below to see how I bring ideas to life through code."
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:px-10 px-0 mt-8">
         <div className="border border-gray-700 p-6 flex items-center justify-center">
           <a href="https://gba-project.vercel.app/" target="blank">
             <img

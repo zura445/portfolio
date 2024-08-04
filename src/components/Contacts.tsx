@@ -87,10 +87,7 @@ const ContactForm: React.FC = () => {
           />
           <label
             htmlFor="user_name"
-            className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
-                      ${
-                        errors.user_name ? "text-red-400" : "text-blue-400"
-                      } -top-3.5 text-xs`}
+            className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all`}
           >
             _name*
           </label>
@@ -111,10 +108,7 @@ const ContactForm: React.FC = () => {
           />
           <label
             htmlFor="user_email"
-            className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
-                      ${
-                        errors.user_email ? "text-red-400" : "text-blue-400"
-                      } -top-3.5 text-xs`}
+            className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all`}
           >
             _email*
           </label>
@@ -134,10 +128,7 @@ const ContactForm: React.FC = () => {
           />
           <label
             htmlFor="message"
-            className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all
-                      ${
-                        errors.message ? "text-red-400" : "text-blue-400"
-                      } -top-3.5 text-xs`}
+            className={`absolute left-0 -top-3.5 text-gray-400 text-sm transition-all`}
           >
             _message*
           </label>

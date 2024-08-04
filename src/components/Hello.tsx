@@ -44,7 +44,7 @@ function Hello() {
   return (
     <div className="flex flex-col text-center mt-20">
       <p className="text-white">// HI, I'M ZURA TETRASHVILI ...</p>
-      <h1 className="mt-4 text-orange-300">
+      <h1 className="mt-4 text-orange-300 md:text-2xl lg:text-4xl text-base">
         {'{" '}
         <span>{text}</span>
         <span id="cursor"></span>
