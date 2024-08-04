@@ -13,20 +13,20 @@ interface FormData {
 const schema = yup.object().shape({
   user_name: yup
     .string()
-    .min(2, "The name must contain at least 2 characters")
-    .required("Name is required"),
+    .required("Name is required")
+    .min(2, "The name must contain at least 2 characters"),
   user_email: yup
     .string()
-    .email("Invalid email format")
-    .min(2, "Email must contain at least 2 characters")
     .required("Email is mandatory")
+    .min(2, "Email must contain at least 2 characters")
+    .email("Invalid email format")
     .test("is-valid", "Invalid email format", (value) => {
       return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
     }),
   message: yup
     .string()
-    .min(2, "The message must contain at least 2 characters")
-    .required("Notification is mandatory"),
+    .required("Message is mandatory")
+    .min(2, "The message must contain at least 2 characters"),
 });
 
 const ContactForm: React.FC = () => {
