@@ -13,33 +13,53 @@ function Portfolio() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 px-10 mt-8">
-        <div className="border border-gray-700 p-6">
+        <div className="border border-gray-700 p-6 flex items-center justify-center">
           <a href="https://gba-project.vercel.app/" target="blank">
-            <img src="/images/gba.jpg" alt="GBA image" />
+            <img
+              src="/images/gba.jpg"
+              alt="GBA image"
+              className="max-h-[500px]"
+            />
             <div className="mt-2">Georgian Bartenders Association </div>
           </a>
         </div>
-        <div className="border border-gray-700 p-6 flex gap-8">
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
           <a href="https://zuratours.vercel.app/" target="blank">
-            <img src="/images/tour.jpg" alt="tours image" />
+            <img
+              src="/images/tour.jpg"
+              alt="tours image"
+              className="max-h-[500px]"
+            />
             <div className="mt-2">zura tours</div>
           </a>
         </div>
-        <div className="border border-gray-700 p-6 flex gap-8">
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
           <a href="https://social-notifications-ui.vercel.app/" target="blank">
-            <img src="/images/notifications.jpg" alt="notifications image" />
+            <img
+              src="/images/notifications.jpg"
+              alt="notifications image"
+              className="max-h-[500px]"
+            />
             <div className="mt-2">Notifications</div>
           </a>
         </div>
-        <div className="border border-gray-700 p-6 flex gap-8">
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
           <a href="https://nexus-project-one.vercel.app/" target="blank">
-            <img src="/images/nexus.jpg" alt="tours image" />
+            <img
+              src="/images/nexus.jpg"
+              alt="tours image"
+              className="max-h-[500px]"
+            />
             <div className="mt-2">Nexus project</div>
           </a>
         </div>
-        <div className="border border-gray-700 p-6 flex gap-8">
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
           <a href="https://rate-design.vercel.app/" target="blank">
-            <img src="/images/rate.jpg" alt="notifications image" />
+            <img
+              src="/images/rate.jpg"
+              alt="notifications image"
+              className="max-h-[500px]"
+            />
             <div className="mt-2">Rate-design</div>
           </a>
         </div>
