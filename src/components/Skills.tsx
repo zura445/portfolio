@@ -32,7 +32,14 @@ function Skills() {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+          // Reset the animation state when the component becomes visible
           setStartAnimation(true);
+          setSkillTexts({});
+          setIsDeleting(false);
+          setTypingSpeed(TYPING_SPEED);
+        } else {
+          // Stop the animation when the component is not visible
+          setStartAnimation(false);
         }
       },
       { threshold: 0.1 }
