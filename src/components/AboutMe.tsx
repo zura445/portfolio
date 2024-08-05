@@ -16,11 +16,22 @@ function AboutMe() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (contentRef.current) {
-      setContentHeight(
-        showAll ? `${contentRef.current.scrollHeight}px` : "0px"
-      );
-    }
+    const updateHeight = () => {
+      if (contentRef.current) {
+        setContentHeight(
+          showAll ? `${contentRef.current.scrollHeight + 20}px` : "0px"
+        );
+      }
+    };
+
+    const timeoutId = setTimeout(updateHeight, 0);
+
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("resize", updateHeight);
+    };
   }, [showAll]);
 
   const toggleJobsVisibility = () => {
@@ -39,7 +50,7 @@ function AboutMe() {
         ...I'm a web developer with experience in Front-End and Software Quality
         Assurance. I strive to create innovative, high-quality products that
         meet modern standards, focusing on enhancing user experience and
-        ensuring software quality."
+        ensuring software quality.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         {jobs.slice(0, 2).map((job, index) => (
@@ -52,7 +63,7 @@ function AboutMe() {
           style={{ height: contentHeight }}
           className="overflow-hidden transition-all duration-700 ease-in-out"
         >
-          <div ref={contentRef}>
+          <div ref={contentRef} className="pb-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
               {jobs.slice(2).map((job, index) => (
                 <JobItem key={index + 2} job={job} />
