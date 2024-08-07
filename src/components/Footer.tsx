@@ -16,6 +16,7 @@ function Footer() {
         href="https://github.com/zura445"
         target="_blank"
         rel="noopener noreferrer"
+        title="title"
       >
         <img
           src="/images/github.png"
