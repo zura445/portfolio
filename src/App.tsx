@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import Contacts from "./components/Contacts";
 import Numbers from "./components/Numbers";
+import Footer from "./components/Footer";
 
 function App() {
   console.log(document.body.clientHeight);
@@ -19,6 +20,7 @@ function App() {
         <Portfolio />
         <Skills />
         <Contacts />
+        <Footer />
       </div>
     </>
   );
