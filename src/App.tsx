@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Contacts from "./components/Contacts";
 import Numbers from "./components/Numbers";
 import Footer from "./components/Footer";
+import Education from "./components/Education";
 
 function App() {
   console.log(document.body.clientHeight);
@@ -18,6 +19,7 @@ function App() {
         <Hello />
         <AboutMe />
         <Portfolio />
+        <Education />
         <Skills />
         <Contacts />
         <Footer />
