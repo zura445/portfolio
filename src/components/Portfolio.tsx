@@ -63,6 +63,16 @@ function Portfolio() {
             <div className="mt-2">Rate-design</div>
           </a>
         </div>
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
+          <a href="https://music-page-orpin.vercel.app/" target="blank">
+            <img
+              src="/images/music-page.jpg"
+              alt="notifications image"
+              className="max-h-[500px]"
+            />
+            <div className="mt-2">Music page</div>
+          </a>
+        </div>
       </div>
     </div>
   );
