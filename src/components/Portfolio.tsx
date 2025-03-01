@@ -73,6 +73,16 @@ function Portfolio() {
             <div className="mt-2">Music page</div>
           </a>
         </div>
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
+          <a href="https://accordion2-tp8b.vercel.app/" target="blank">
+            <img
+              src="/images/FAQ.jpg"
+              alt="FAQ image"
+              className="max-h-[500px]"
+            />
+            <div className="mt-2">Accordion</div>
+          </a>
+        </div>
       </div>
     </div>
   );
