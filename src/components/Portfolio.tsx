@@ -74,13 +74,23 @@ function Portfolio() {
           </a>
         </div>
         <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
-          <a href="https://accordion2-tp8b.vercel.app/" target="blank">
+          <a href="https://accordion2-ashy.vercel.app/" target="blank">
             <img
               src="/images/FAQ.jpg"
               alt="FAQ image"
               className="max-h-[500px]"
             />
             <div className="mt-2">Accordion</div>
+          </a>
+        </div>
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
+          <a href="https://input-control.vercel.app/" target="blank">
+            <img
+              src="/images/input-control.jpg"
+              alt="FAQ image"
+              className="max-h-[500px]"
+            />
+            <div className="mt-2">Input control</div>
           </a>
         </div>
       </div>
