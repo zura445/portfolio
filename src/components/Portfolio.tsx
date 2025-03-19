@@ -93,6 +93,16 @@ function Portfolio() {
             <div className="mt-2">Input control</div>
           </a>
         </div>
+        <div className="border border-gray-700 p-6 flex items-center justify-center gap-8">
+          <a href="https://splitter-six-iota.vercel.app/" target="blank">
+            <img
+              src="/images/splitter-image.jpg"
+              alt="FAQ image"
+              className="max-h-[500px]"
+            />
+            <div className="mt-2">splitter</div>
+          </a>
+        </div>
       </div>
     </div>
   );
