@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="flex justify-center mt-8">
+    <div className="flex justify-center items-center mt-8">
       <a
         href="https://www.linkedin.com/in/zura-tetrashvili-728b5b203/"
         target="_blank"
@@ -24,6 +24,7 @@ function Footer() {
           className="w-10 object-contain ml-10 rounded"
         />
       </a>
+      <p className="ml-10">TEL: 597-000-540</p>
     </div>
   );
 }
