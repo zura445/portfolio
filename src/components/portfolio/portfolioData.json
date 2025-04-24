@@ -43,5 +43,10 @@
     "url": "https://splitter-six-iota.vercel.app/",
     "image": "/images/splitter-image.jpg",
     "name": "splitter"
+  },
+  {
+    "url": "https://calculator-six-beta-78.vercel.app/",
+    "image": "/images/calculator.jpg",
+    "name": "calculator"
   }
 ]
