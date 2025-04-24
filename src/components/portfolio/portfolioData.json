@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://gba-project.vercel.app/",
+    "image": "/images/gba.jpg",
+    "name": "Georgian Bartenders Association"
+  },
+  {
+    "url": "https://zuratours.vercel.app/",
+    "image": "/images/tour.jpg",
+    "name": "zura tours"
+  },
+  {
+    "url": "https://social-notifications-ui.vercel.app/",
+    "image": "/images/notifications.jpg",
+    "name": "Notifications"
+  },
+  {
+    "url": "https://nexus-project-one.vercel.app/",
+    "image": "/images/nexus.jpg",
+    "name": "Nexus project"
+  },
+  {
+    "url": "https://rate-design.vercel.app/",
+    "image": "/images/rate.jpg",
+    "name": "Rate-design"
+  },
+  {
+    "url": "https://music-page-orpin.vercel.app/",
+    "image": "/images/music-page.jpg",
+    "name": "Music page"
+  },
+  {
+    "url": "https://accordion2-ashy.vercel.app/",
+    "image": "/images/FAQ.jpg",
+    "name": "Accordion"
+  },
+  {
+    "url": "https://input-control.vercel.app/",
+    "image": "/images/input-control.jpg",
+    "name": "Input control"
+  },
+  {
+    "url": "https://splitter-six-iota.vercel.app/",
+    "image": "/images/splitter-image.jpg",
+    "name": "splitter"
+  }
+]

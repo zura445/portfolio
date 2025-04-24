@@ -24,7 +24,9 @@ function Footer() {
           className="w-10 object-contain ml-10 rounded"
         />
       </a>
-      <p className="ml-10">TEL: 597-000-540</p>
+      <a href="tel:+995 597 000 540" className="ml-10">
+        TEL: 597-000-540
+      </a>
     </div>
   );
 }
